@@ -4,8 +4,12 @@ export type MealType={
     strCategory:string,
     strArea:string,
     strMealThumb:string,
-    strInstruction:string,
-}
+    strInstructions:string,
+   
+}& {
+    [key: `strIngredient${number}`]: string; 
+
+  };
 
 export type Action<T=any>={
     type:string,

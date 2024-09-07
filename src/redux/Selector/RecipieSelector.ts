@@ -8,6 +8,7 @@ export const stateSelector=(state:MainState)=>{
 export const MealSelector=createSelector(stateSelector,(state)=>{
     return state.MealList
 })
+
 export const MealList=createSelector(MealSelector,(list)=>{
 
     return Object.keys(list).map((id)=>list[id])

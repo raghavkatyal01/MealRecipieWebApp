@@ -25,3 +25,11 @@ export const updateMeal:ActionCreator<MealType[]>=(m:MealType[])=>({
 
 
 
+export const GET_RECIPIE_DETAIL="GET_RECIPIE_DETAIL"
+export const GetRecipieDetailAction:ActionCreator<string>=(id:string)=>({
+    type:GET_RECIPIE_DETAIL,
+    payload:id,
+
+})
+
+

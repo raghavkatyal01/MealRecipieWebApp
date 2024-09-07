@@ -1,15 +1,17 @@
 import { produce } from "immer";
 import { AnyAction } from "redux";
 import { MealType } from "../Models/Models";
-import { CHANGE_QUERY_ACTION, UPDATE_MEAL } from "../Action/MealSearchAction";
+import { CHANGE_QUERY_ACTION, UPDATE_MEAL} from "../Action/MealSearchAction";
 
 export type State={
     MealList:{[key:string]:MealType},
+   
     query:string,
 }
 const initialValue:State={
     MealList:{},
     query:"",
+
 }
 
 
@@ -32,6 +34,7 @@ function RecipieDataReducer(State=initialValue,action:AnyAction):State{
                 return produce(State,(draft)=>{
                     draft.query=action.payload as string
                 })
+          
 
         default:
             return State;
